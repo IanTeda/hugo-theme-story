@@ -75,6 +75,7 @@
     "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^5.0.0",
     "jsdoc": "^3.4.0",
+    "jshint": "^2.9.5",
     "lost": "^8.2.0",
     "merge2": "^1.0.1",
     "npm-check-updates": "^2.5.8",

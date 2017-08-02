@@ -37,11 +37,6 @@ module.exports = {
       lazy: true,
     },
   },
-  gzip: {
-    options: {
-      append: true,
-    },
-  },
   images: {
     extensions: '*.{png,gif,jpg}',
     src: src + 'images/**/*.{png,gif,jpg}',
@@ -94,9 +89,6 @@ module.exports = {
   },
   postcss: {
     processors: [
-      autoprefixer({
-        browsers: ['last 3 version'],
-      }),
       cssnext,
       lost,
       magician,
@@ -107,20 +99,24 @@ module.exports = {
   },
   scripts: {
     extensions: '*.js',
-    filename: 'hasper.js',
+    filename: 'story.js',
     src: [
       nodeModules + 'jquery/dist/jquery.js',
+      src + 'scripts/jquery.scrollex.min.js',
+      src + 'scripts/jquery.scrolly.min.js',
+      src + 'scripts/skel.min.js',
+      src + 'scripts/util.js',
       src + 'scripts/main.js',
     ],
     dest: hstatic + 'scripts',
   },
   styles: {
     extensions: '*.css',
-    filename: 'hasper.css',
+    filename: 'story.css',
     src: [
       nodeModules + '/animate.css/animate.css',
       nodeModules + '/font-awesome/css/font-awesome.css',
-      src + 'styles/screen.css',
+      src + 'styles/story.css',
     ],
     dest: hstatic + 'styles',
   },
